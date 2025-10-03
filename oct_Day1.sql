@@ -1,4 +1,5 @@
 #30 Days of SQL - From Basic to Advanced Level
+Referal link: https://www.geeksforgeeks.org/sql/30-days-of-sql-from-basic-to-advanced-level/
 
 1.What is SQL?
 
