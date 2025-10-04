@@ -128,6 +128,156 @@ select * from customer order by country desc;
 
 select * from customer order by country asc;
 
+#4.SQL - WHERE Clause:
+
+*In SQL, the WHERE clause is used to filter rows based on specific conditions. 
+*Whether you are retrieving, updating, or deleting data, WHERE ensures that only relevant records are affected. 
+*Without it, your query applies to every row in the table! The WHERE clause helps you:
+
+*Filter rows that meet certain conditions
+*Target specific data using logical, comparison and pattern-based operators
+*Control SELECT, UPDATE, DELETE or even INSERT statements
+
+Syntax:
+
+SELECT column1, column2
+FROM table_name
+WHERE column_name operator value;
+
+#Examples of WHERE Clause in SQL:
+
+Query:
+
+CREATE TABLE Emp1 (
+  EmpID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Country VARCHAR(50),
+  Age INT,
+  Mob VARCHAR(15)
+);
+
+select * from emp1;
+
+INSERT INTO Emp1 VALUES
+(1, 'Shubham',  'India', 23, '738479734'),
+(2, 'Aman',     'Australia', 21, '436789555'),
+(3, 'Naveen',   'Sri Lanka', 24, '34873847'),
+(4, 'Aditya',   'Austria', 21, '328440934'),
+(5, 'Nishant',  'Spain', 22, '73248679');
+
+select * from emp1;
+
+#Example 1: Where Clause with Logical Operators:
+
+*To fetch records of  Employee with age equal to 24. 
+
+Query:
+
+SELECT * FROM Emp1 WHERE Age=24;
+
+select name from emp1 where age=24;
+
+select country from emp1 where age=24;
+
+select mob from emp1 where age=24;
+
+#Example 2: WHERE with Comparison Operators:
+
+*To fetch the EmpID, Name and Country of Employees with Age greater than 21. 
+
+Query:
+
+SELECT EmpID, Name, Country FROM Emp1 WHERE Age > 21;
+
+select * from emp1 where age>21;
+
+select * from emp1 where age>=22;
+
+#Example 3: Where Clause with BETWEEN Operator:
+
+*The BETWEEN operator is used to filter records within a specified range, and it includes both the start and end values. 
+*In this example, we want to find employees whose age is between 22 and 24, including both 22 and 24.
+
+Query:
+
+SELECT * FROM Emp1 
+WHERE Age BETWEEN 22 AND 24;
+
+select * from emp1 where age between 21 and 23;
+
+#Example 4: Where Clause with LIKE Operator:
+
+*It is used to fetch filtered data by searching for a particular pattern in the where clause. 
+*In this example we want to find records of Employees where Name starts with the letter. 
+*The '%'(wildcard) signifies the later characters here which can be of any length and value. 
+
+Query:
+
+SELECT * FROM Emp1 WHERE Name LIKE 'S%'; 
+
+select * from emp1 where name like 'a%';
+
+select * from emp1 where name like '%a';
+
+SELECT * FROM Emp1 WHERE Name LIKE '%S';
+
+select * from emp1;
+
+#To fetch records of Employees where Name contains the pattern 'M':
+
+Query:
+
+SELECT * FROM Emp1 WHERE Name LIKE '%M%';
+
+#Example 5: Where Clause with IN Operator:
+
+*It is used to fetch the filtered data same as fetched by '=' operator just the difference is that here we can specify multiple values for which we can get the result set. 
+*Here we want to find the Names of Employees where Age is 21 or 23.
+
+Query:
+
+SELECT Name FROM Emp1 WHERE Age IN (21,23);
+
+SELECT * FROM Emp1 WHERE Age IN (21,23);
+
+#List of Operators that Can be Used with WHERE Clause:
+----------------------------------------------------------------------------------------------
+Operator	                              Description
+>	                                      Greater Than
+>=	                                      Greater than or Equal to
+<	                                      Less Than
+<=	                                      Less than or Equal to
+=	                                      Equal to
+<>	                                      Not Equal to
+BETWEEN	                                  In an inclusive Range
+LIKE	                                  Search for a pattern
+IN	                                      To specify multiple possible values for a column
+
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
